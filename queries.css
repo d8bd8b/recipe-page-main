@@ -1,0 +1,15 @@
+@media (min-width: 32.5em) {
+  body {
+    margin: 4.8rem auto;
+  }
+  .recipe {
+    padding: 3.2rem;
+    border-radius: 12px;
+  }
+  .hero-img {
+    border-radius: 12px;
+  }
+  .preptime {
+    border-radius: 12px;
+  }
+}

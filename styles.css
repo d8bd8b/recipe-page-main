@@ -1,14 +1,13 @@
-/* - White: hsl(0, 0%, 100%)
-
-- Stone 100: hsl(30, 54%, 90%)
-- Stone 150: hsl(30, 18%, 87%)
-- Stone 600: hsl(30, 10%, 34%)
-- Stone 900: hsl(24, 5%, 18%)
-
-- Brown 800: hsl(14, 45%, 36%)
-
-- Rose 800: hsl(332, 51%, 32%)
-- Rose 50: hsl(330, 100%, 98%) */
+:root {
+  --white: hsl(0, 0%, 100%);
+  --stone-100: hsl(30, 54%, 90%);
+  --stone-150: hsl(30, 18%, 87%);
+  --stone-600: hsl(30, 10%, 34%);
+  --stone-900: hsl(24, 5%, 18%);
+  --brown-800: hsl(14, 45%, 36%);
+  --rose-800: hsl(332, 51%, 32%);
+  --rose-50: hsl(330, 100%, 98%);
+}
 * {
   margin: 0;
   padding: 0;
@@ -19,8 +18,8 @@ html {
 }
 body {
   font-family: "Outfit", sans-serif;
-  background-color: hsl(30, 54%, 90%);
-  color: hsl(30, 10%, 34%);
+  background-color: var(--stone-100);
+  color: var(--stone-600);
   font-size: 1.6rem;
 }
 h1,
@@ -29,17 +28,18 @@ h2 {
   font-weight: 700;
 }
 strong {
-  color: hsl(24, 5%, 18%);
+  color: var(--stone-600);
 }
 
 .recipe {
-  background-color: white;
+  background-color: var(--white);
   min-width: 30rem;
   max-width: 80rem;
   display: flex;
   flex-direction: column;
   gap: 1.8rem;
   margin: 0 auto;
+  border-radius: 12px;
 }
 
 .hero-img {
@@ -53,7 +53,7 @@ strong {
   align-items: flex-start;
 }
 .header-primary {
-  color: hsl(24, 5%, 18%);
+  color: var(--stone-900);
   line-height: 1;
   font-size: 3.2rem;
 }
@@ -62,17 +62,17 @@ strong {
   word-spacing: -0.05rem;
 }
 .preptime {
-  background-color: hsl(330, 100%, 98%);
+  background-color: var(--rose-50);
   width: 100%;
   padding: 1.6rem 2.4rem;
   margin-bottom: 0.8rem;
 }
 .header-tertiary {
-  color: hsl(332, 51%, 32%);
+  color: var(--rose-800);
   margin-bottom: 1.6rem;
 }
 .preptime-list,
-.ingridients-list {
+.ingredients-list {
   padding-left: 1.6rem;
 }
 .preptime-list-item p {
@@ -87,18 +87,17 @@ strong {
   font-size: 1.1rem;
 }
 .preptime-list-item::marker {
-  color: hsl(332, 51%, 32%);
-  /* padding-right: 1rem; */
+  color: var(--rose-800);
 }
 .header-secondary {
-  color: hsl(14, 45%, 36%);
+  color: var(--brown-800);
   font-size: 2.6rem;
   margin-bottom: 2.4rem;
 }
 
 .instructions {
-  border-top: 1px solid hsl(30, 18%, 87%);
-  border-bottom: 1px solid hsl(30, 18%, 87%);
+  border-top: 1px solid var(--stone-150);
+  border-bottom: 1px solid var(--stone-150);
   padding-top: 2.4rem;
   padding-bottom: 4rem;
 
@@ -115,7 +114,7 @@ strong {
 }
 .instructions ol li::marker {
   font-weight: 600;
-  color: hsl(14, 45%, 36%);
+  color: var(--brown-800);
 }
 .nutrition {
   width: 100%;
@@ -129,12 +128,12 @@ strong {
 .nutrition-table tr td {
   width: 45%;
   padding: 2.4rem 4rem;
-  border-bottom: 1px solid hsl(30, 18%, 87%);
+  border-bottom: 1px solid var(--stone-150);
 }
 
 .nutrition-table tr td:last-child {
   width: 1fr;
-  color: hsl(14, 45%, 36%);
+  color: var(--brown-800);
   font-weight: 600;
   text-align: start;
 }
